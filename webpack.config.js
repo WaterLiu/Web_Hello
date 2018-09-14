@@ -17,7 +17,8 @@ module.exports = {
     resolve: {
         alias: {
             "jquery": "jquery",
-            "jquery-ui": "jquery-ui"
+            "jquery-ui": "jquery-ui",
+            // "Reveal": "Reveal"
         }
     },
     module: {
@@ -51,6 +52,10 @@ module.exports = {
             {
                 test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
                 loader: 'url-loader?name=[path][name].[ext]'
+            },
+            {
+                test:/\.(sass|scss)$/,
+                use:['style-loader','css-loader','sass-loader']
             }
         ]
     },
