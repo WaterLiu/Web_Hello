@@ -3,22 +3,16 @@ import PropTypes from 'prop-types';
 
 class PropTypesE extends React.Component {
 
+
+    static propTypes = {
+        testStr: PropTypes.string,
+        testInt: PropTypes.number
+    };
+
     constructor(props) {
         super(props);
 
-        // this.props.testStr = 'test';
-        // this.props.testInt = 10;
-
-        // this.props = {
-        //     testStr : '',
-        //     testInt : 0
-        // };
-
         return this;
-    }
-
-    componentWillMount() {
-        console.log('1111');
     }
 
     render() {
@@ -29,12 +23,6 @@ class PropTypesE extends React.Component {
         );
     }
 }
-
-
-PropTypes.prototype = {
-    testStr: PropTypes.string,
-    testInt: PropTypes.number
-};
 
 
 export default PropTypesE;

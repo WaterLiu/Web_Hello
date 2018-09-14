@@ -78,7 +78,7 @@ class ReactApp extends React.Component {
                 <State />
                 <Refs />
                 <Life test={this.state.value} callback={this.buttonClicked.bind(this)}/>
-                <PropTypesE />
+                <PropTypesE testStr={'testStr'}/>
             </div>
         );
     }
