@@ -4,15 +4,14 @@ import Props from './props';
 import State from './state';
 import Life from './lifecycle';
 import PropTypesE from './propTypes';
+import Context from './context/contextE'
 
+//
 import '../lib/reveal.js/css/reveal.css';
 import '../lib/reveal.js/css/theme/white.css';
 import '../lib/reveal.js';
 import '../lib/reveal.js/lib/js/head.min.js';
 import '../lib/reveal.js/plugin/zoom-js/zoom';
-// import '../lib/reveal.js/plugin/highlight/highlight';
-
-
 import $ from 'jquery';
 import 'jquery-ui/ui/widgets/draggable';
 import '../main.css';
@@ -79,6 +78,7 @@ class ReactApp extends React.Component {
                 <Refs />
                 <Life test={this.state.value} callback={this.buttonClicked.bind(this)}/>
                 <PropTypesE testStr={'testStr'}/>
+                <Context />
             </div>
         );
     }
