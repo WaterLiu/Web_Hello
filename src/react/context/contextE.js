@@ -38,9 +38,6 @@ class ContextE extends React.Component {
                 <ThemeContext.Provider value={this.state.theme}>
                     <Toolbar changeTheme={this.toggleTheme}/>
                 </ThemeContext.Provider>
-                <div>
-                    <ThemedButton/>
-                </div>
             </div>
         );
     }

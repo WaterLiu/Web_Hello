@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 
 class PropTypesE extends React.Component {
 
+    static defaultProps = {
+        testStr: 'testStr',
+        testInt: 1000
+    }
 
     static propTypes = {
         testStr: PropTypes.string,
@@ -19,6 +23,9 @@ class PropTypesE extends React.Component {
         return (
             <div>
                 <h2>PropTypes Example</h2>
+                {
+                    'TestStr = ' + this.props.testStr+ '    ' + 'TestStr = ' + this.props.testInt
+                }
             </div>
         );
     }

@@ -4,7 +4,10 @@ import Props from './props';
 import State from './state';
 import Life from './lifecycle';
 import PropTypesE from './propTypes';
-import Context from './context/contextE'
+import Context from './context/contextE';
+import PropsChildren from './propsChildren'
+
+import {ThemeContext} from './context/theme-context';
 
 //
 import '../lib/reveal.js/css/reveal.css';
@@ -16,6 +19,7 @@ import $ from 'jquery';
 import 'jquery-ui/ui/widgets/draggable';
 import '../main.css';
 
+
 class ReactApp extends React.Component {
 
     constructor(props) {
@@ -26,7 +30,6 @@ class ReactApp extends React.Component {
             value: 0,
             themeColor: 'waterColor',
         };
-
 
 
         // Reveal.initialize({
@@ -41,7 +44,6 @@ class ReactApp extends React.Component {
     }
 
     componentDidMount() {
-
         $("#draggable").draggable();
 
         // Reveal.initialize({
@@ -71,14 +73,28 @@ class ReactApp extends React.Component {
     }
 
     render() {
+
         return (
             <div>
-                <Props title={"Title Props"} content={'Content Props'}/>
-                <State />
-                <Refs />
-                <Life test={this.state.value} callback={this.buttonClicked.bind(this)}/>
+                <div id="draggable">
+                    <p>Drag me around {this.state.value}</p>
+                </div>
+                <Props title1={"Title Props1111"} content={'Content Props'}/>
+                <State/>
+                <Refs/>
+                <Life  callback={this.buttonClicked.bind(this)}/>
                 <PropTypesE testStr={'testStr'}/>
-                <Context />
+                <Context/>
+
+                <PropTypesE testStr={11111}>
+                    <div>This is Props.Children</div>
+                </PropTypesE>
+
+                <PropsChildren testStr={'testStr'}>
+                    <div>This is Props.Children</div>
+                    <div>This second Props.Children</div>
+                </PropsChildren>
+
             </div>
         );
     }

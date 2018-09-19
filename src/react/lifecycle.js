@@ -18,6 +18,8 @@ class Lifecycle extends React.Component {
 
     componentWillMount() {
         console.log('componentWillMount');
+
+        this.state.clickCount++;
     }
 
     componentDidMount() {
@@ -34,6 +36,7 @@ class Lifecycle extends React.Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         console.log('shouldComponentUpdate');
+
 
         if (this.state.clickCount > 10)
         {

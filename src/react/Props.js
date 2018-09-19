@@ -6,6 +6,7 @@ import React from 'react';
  * 2. Content
  */
 
+
 class Props extends React.Component {
 
     constructor(props) {
@@ -17,7 +18,8 @@ class Props extends React.Component {
         return (
             <div>
                 <h2>Props Example</h2>
-                <p>Title = {this.props.title}</p>
+                {/*<p>Title = {this.props.title}</p>*/}
+                <p>Title = {this.props.title1}</p>
                 <p>Content = {this.props.content}</p>
             </div>
         );
