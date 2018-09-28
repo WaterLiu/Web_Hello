@@ -18,7 +18,6 @@ module.exports = {
         alias: {
             "jquery": "jquery",
             "jquery-ui": "jquery-ui",
-            // "Reveal": "Reveal"
         }
     },
     module: {
