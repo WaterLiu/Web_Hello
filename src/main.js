@@ -40,6 +40,7 @@ $(document).ready(function () {
     else if(ExampleConfig === 'mobx')
     {
 
+
     }
     else
     {
