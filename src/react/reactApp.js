@@ -10,11 +10,11 @@ import PropsChildren from './propsChildren'
 import {ThemeContext} from './context/theme-context';
 
 //
-import '../lib/reveal.js/css/reveal.css';
-import '../lib/reveal.js/css/theme/white.css';
-import '../lib/reveal.js';
-import '../lib/reveal.js/lib/js/head.min.js';
-import '../lib/reveal.js/plugin/zoom-js/zoom';
+// import '../lib/reveal.js/css/reveal.css';
+// import '../lib/reveal.js/css/theme/white.css';
+// import '../lib/reveal.js';
+// import '../lib/reveal.js/lib/js/head.min.js';
+// import '../lib/reveal.js/plugin/zoom-js/zoom';
 import $ from 'jquery';
 import 'jquery-ui/ui/widgets/draggable';
 import '../main.css';

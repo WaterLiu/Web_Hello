@@ -4,11 +4,14 @@ import ReactApp from './react/reactApp';
 import {BasicExample} from './react-router/router';
 import './main.css';
 import {ButtonClicked} from './JS/arrowMethod';
+import ClassE from './JS/classE';
+import MobxE from './mobx';
 
 
 // let ExampleConfig = 'React';
 // let ExampleConfig = 'React-Rountr';
-let ExampleConfig = 'JS';
+// let ExampleConfig = 'JS';
+let ExampleConfig = 'mobx';
 {/*<button onClick={this.buttonClicked.bind(this)}>测试button</button>*/}
 
 $(document).ready(function () {
@@ -30,6 +33,13 @@ $(document).ready(function () {
             ButtonClicked();
         }
         parent.appendChild(btn);
+
+
+        ReactDOM.render(<ClassE store={'water'}/>, document.getElementById('react-app'));
+    }
+    else if(ExampleConfig === 'mobx')
+    {
+
     }
     else
     {

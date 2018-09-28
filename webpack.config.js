@@ -22,24 +22,12 @@ module.exports = {
     },
     module: {
         rules: [
-            // {
-            //     test: /(\.jsx|\.js)$/,
-            //     use: {
-            //         loader: "babel-loader",
-            //         options: {
-            //             presets: [
-            //                 "react", "es2015"
-            //             ]
-            //         }
-            //     },
-            //     exclude: /node_modules/
-            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    plugins: ['transform-runtime'],
+                    plugins: ['transform-runtime', 'transform-decorators-legacy'],
                     presets: ['es2015', 'react', 'stage-2']
                 }
             },
