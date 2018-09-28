@@ -31,7 +31,6 @@ class ReactApp extends React.Component {
             themeColor: 'waterColor',
         };
 
-
         // Reveal.initialize({
         //     controls: true,
         //     progress: true,
@@ -68,8 +67,8 @@ class ReactApp extends React.Component {
     }
 
     buttonClicked() {
-        this.state.value++;
-        this.setState({value:this.state.value});
+        // this.state.value++;
+        // this.setState({value:this.state.value});
     }
 
     render() {
@@ -86,7 +85,7 @@ class ReactApp extends React.Component {
                 <PropTypesE testStr={'testStr'}/>
                 <Context/>
 
-                <PropTypesE testStr={11111}>
+                <PropTypesE testStr={'TestStr'}>
                     <div>This is Props.Children</div>
                 </PropTypesE>
 
